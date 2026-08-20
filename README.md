@@ -1,2 +1,4 @@
 # manual-git-04
-en este respositorio encontraras conceptos basicos acerca de git
+##  Nombres de integrantes del grupo: 
+
+- JALITH SANTIAGO OLIVEROS VALENZUELA
