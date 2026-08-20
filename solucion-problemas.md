@@ -344,3 +344,106 @@ git push
 
 Este proceso ayuda a mantener sincronizado el trabajo local con el repositorio remoto.
 
+
+## 15. Problemas al cambiar de rama
+
+Git puede impedir que un usuario cambie de rama cuando existen modificaciones locales que podrían sobrescribirse. Esto ocurre como medida de protección para evitar la pérdida accidental de trabajo.
+
+### Solución
+
+Antes de cambiar de rama, se debe revisar:
+
+```bash
+git status
+```
+
+Si los cambios son importantes, pueden guardarse mediante un commit. Si todavía no están terminados, se puede utilizar `git stash` para almacenarlos temporalmente.
+
+Después de cambiar de rama, los cambios pueden recuperarse cuando sea necesario.
+
+## 16. Problemas con commits incorrectos
+
+También puede suceder que un desarrollador realice un commit con un mensaje incorrecto, incluya un archivo que no debía incluir o registre cambios antes de estar completamente preparados.
+
+### Solución
+
+La solución depende de si el commit ya fue enviado al repositorio remoto o permanece únicamente en el equipo local.
+
+Cuando el problema es sencillo y el commit todavía no se ha compartido, Git ofrece herramientas para modificar el historial local. Sin embargo, cuando el commit ya fue enviado a un repositorio compartido, se debe tener especial cuidado al modificar el historial, ya que otros colaboradores podrían depender de él.
+
+Por esta razón, antes de utilizar comandos que reescriban el historial es necesario comprender sus consecuencias.
+
+## 17. Problemas por cambios realizados por varias personas
+
+En proyectos colaborativos pueden existir situaciones en las que diferentes desarrolladores modifican archivos relacionados al mismo tiempo. Aunque Git puede combinar automáticamente muchos cambios, no siempre puede hacerlo.
+
+Además de los conflictos técnicos, pueden surgir problemas de organización si varias personas trabajan sobre las mismas funcionalidades sin coordinarse.
+
+### Solución
+
+La comunicación entre los integrantes del equipo es fundamental. Antes de realizar una modificación importante, puede ser conveniente informar al equipo y registrar la tarea correspondiente.
+
+El uso de ramas independientes, Issues y pull requests ayuda a distribuir el trabajo y facilita la revisión de las modificaciones.
+
+## 18. Problemas de archivos demasiado grandes
+
+GitHub establece determinadas restricciones para los archivos que pueden almacenarse normalmente en un repositorio. Intentar subir archivos demasiado grandes puede generar errores o hacer que el repositorio sea difícil de administrar.
+
+Esto puede ocurrir especialmente con videos, archivos comprimidos, modelos de inteligencia artificial, bases de datos o archivos multimedia de gran tamaño.
+
+### Solución
+
+Antes de subir un archivo grande, se debe evaluar si realmente pertenece al repositorio. En algunos casos pueden utilizarse servicios especializados para almacenar archivos grandes o mecanismos como Git Large File Storage (Git LFS), dependiendo de las necesidades del proyecto.
+
+También es recomendable evitar almacenar archivos generados automáticamente que no sean necesarios para ejecutar o comprender el proyecto.
+
+## 19. Problemas con GitHub Actions
+
+GitHub permite automatizar determinadas tareas mediante GitHub Actions. Estas automatizaciones pueden utilizarse para ejecutar pruebas, verificar código o realizar procesos relacionados con el desarrollo.
+
+Sin embargo, una acción puede fallar debido a errores de configuración, dependencias incorrectas, permisos insuficientes o problemas en el propio código.
+
+### Solución
+
+Cuando una acción falla, lo primero que se debe hacer es revisar los registros de ejecución. Estos registros muestran los pasos realizados y normalmente indican en qué parte ocurrió el error.
+
+Es importante identificar si el problema proviene del código del proyecto, de la configuración del flujo de trabajo, de una dependencia o de un servicio externo.
+
+Una vez identificado el origen, se puede modificar el archivo de configuración correspondiente y volver a ejecutar el proceso.
+
+## 20. Cómo prevenir problemas en GitHub
+
+Además de saber solucionar errores, es importante aplicar medidas que permitan prevenirlos. Una buena organización puede reducir considerablemente la cantidad de problemas durante el desarrollo.
+
+Algunas recomendaciones importantes son:
+
+* Realizar commits pequeños y frecuentes.
+* Utilizar mensajes de commit claros.
+* Crear ramas para nuevas funcionalidades o correcciones.
+* Mantener las ramas actualizadas.
+* Revisar los cambios antes de hacer `push`.
+* Utilizar archivos `.gitignore`.
+* Nunca almacenar contraseñas o claves privadas en el repositorio.
+* Revisar los pull requests antes de integrarlos.
+* Mantener una documentación adecuada.
+* Hacer copias de seguridad cuando sea necesario.
+* Utilizar permisos adecuados en los repositorios.
+* Comunicarse con los demás integrantes del equipo.
+* Revisar los errores antes de ejecutar comandos que puedan modificar el historial.
+
+## 21. Importancia de conocer los errores de GitHub
+
+Aprender a solucionar problemas en GitHub es una parte fundamental del aprendizaje de programación. Los errores no deben considerarse únicamente como obstáculos, sino también como oportunidades para comprender mejor cómo funcionan Git, los repositorios y los procesos de colaboración.
+
+Un desarrollador que conoce las herramientas de diagnóstico puede identificar con mayor rapidez el origen de un problema. Comandos como `git status`, `git log`, `git diff` y `git remote -v` proporcionan información importante sobre el estado del proyecto y permiten tomar decisiones antes de realizar cambios.
+
+También es importante comprender que no todos los problemas deben solucionarse de la misma manera. Una solución adecuada depende del origen del error, del estado del repositorio y de si los cambios ya fueron compartidos con otros integrantes del equipo. Por ello, antes de ejecutar comandos potencialmente destructivos, se debe comprobar qué información existe y qué consecuencias puede tener la operación.
+
+## Conclusión
+
+Los problemas relacionados con GitHub pueden presentarse en diferentes etapas del desarrollo de un proyecto. Desde dificultades para instalar y configurar Git hasta conflictos entre ramas, problemas de autenticación, errores al realizar `push` o `pull`, archivos eliminados accidentalmente y problemas de permisos, existen numerosas situaciones que requieren conocimientos básicos de control de versiones para poder solucionarse correctamente.
+
+La mayoría de estos problemas pueden prevenirse mediante una buena organización, el uso adecuado de ramas, commits frecuentes, documentación clara, comunicación entre los integrantes del equipo y buenas prácticas de seguridad. Además, herramientas como `git status`, `git log` y `git diff` permiten obtener información sobre el estado del proyecto y facilitan la identificación de errores.
+
+En definitiva, aprender a solucionar problemas en GitHub es tan importante como aprender a utilizar sus funciones principales. Un usuario que comprende cómo funcionan los repositorios, las ramas, los commits y la sincronización puede trabajar de manera más segura y eficiente. Por esta razón, desarrollar habilidades para identificar, analizar y solucionar errores constituye una parte esencial de la formación de cualquier persona que desee trabajar con programación, desarrollo de software y proyectos colaborativos.
+
