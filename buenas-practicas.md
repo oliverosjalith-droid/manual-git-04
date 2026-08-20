@@ -36,3 +36,75 @@ Actualmente puedes exportar tus archivos a estos formatos:
 * PDF
 * HTML
 * Markdown
+2. Hacer commits pequeños y frecuentes
+
+Es recomendable realizar commits cada vez que se completa una modificación específica. No es conveniente esperar hasta terminar todo el proyecto para hacer un único commit.
+
+Esto permite identificar fácilmente cuándo y dónde ocurrió un problema.
+
+3. Utilizar ramas (branches)
+
+Las ramas permiten desarrollar nuevas funciones o realizar modificaciones sin afectar directamente la versión principal del proyecto.
+
+Por ejemplo:
+
+main: versión principal y estable.
+develop: desarrollo del proyecto.
+feature/login: creación del sistema de inicio de sesión.
+fix/error-login: corrección de un error.
+
+4. Mantener actualizada la rama local
+
+Antes de comenzar a trabajar es recomendable obtener los cambios más recientes del repositorio remoto.
+
+Por ejemplo:
+
+git pull
+
+Esto ayuda a evitar trabajar sobre una versión antigua del proyecto y reduce conflictos.
+
+5. No subir contraseñas ni información privada
+
+Nunca se deben subir al repositorio contraseñas, claves API, tokens, archivos de configuración con información privada o cualquier otro dato sensible.
+
+Para evitarlo se puede utilizar un archivo .gitignore, que indica a Git qué archivos o carpetas no debe incluir en los commits.
+
+6. Revisar los cambios antes de hacer commit
+
+Antes de guardar los cambios es recomendable comprobar qué archivos fueron modificados.
+
+Se puede utilizar:
+
+git status
+
+Y para revisar las diferencias:
+
+git diff
+
+Esto permite detectar errores antes de enviar los cambios al repositorio.
+
+7. Utilizar nombres descriptivos para las ramas
+
+Los nombres de las ramas deben indicar claramente el objetivo de la modificación.
+
+Por ejemplo:
+
+feature/registro-usuarios
+
+es más descriptivo que:
+
+rama1
+
+8. Hacer Pull Request o Merge Request
+
+Cuando se trabaja en equipo, es recomendable revisar los cambios antes de incorporarlos a la rama principal. Para esto se utilizan los Pull Requests o Merge Requests.
+
+Esto permite que otros integrantes revisen el código, encuentren errores y hagan sugerencias antes de aprobar los cambios.
+
+9. Evitar trabajar directamente sobre main
+
+En proyectos colaborativos es recomendable utilizar ramas para desarrollar nuevas funciones y posteriormente integrarlas a main. De esta manera se protege la versión estable del proyecto.
+
+10. Documentar adecuadamente el proyecto
+
+Es recomendable mantener actualizado un archivo como README.md, donde se explique qué hace el proyecto, cómo instalarlo, cómo ejecutarlo y cuáles son sus principales características.
