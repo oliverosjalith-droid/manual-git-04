@@ -90,3 +90,11 @@ Listar ramas locales|git branch|
 |Eliminar rama local (fusionada)|git branch -d <nombre-rama>|
 |Eliminar rama local (forzado)|git branch -D <nombre-rama>|
 Eliminar rama en servidor remoto|git push origin --delete <nombre-rama>|
+
+## Buenas prácticas al trabajar con ramas:
+
+**Nombres descriptivos** Aplica convenciones estándar usando prefijos (feature/, bugfix/, hotfix/).
+
+**Un propósito por rama:** No mezcles la corrección de un diseño con la lógica de una base de datos en la misma rama.
+
+**Limpieza constante:** Borra las ramas temporales inmediatamente después de hacer la integración (merge) para no saturar el historial.
