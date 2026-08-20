@@ -76,3 +76,17 @@ Estas protecciones ayudan a los equipos a mantener las ramas importantes estable
 |Feature **(feature/***)|Se usa para construir una funcionalidad específica (ej: feature/login-google).|Temporal (se elimina al fusionarse)|
 |Hotfix **(hotfix/***)|Permite corregir errores críticos directamente sobre producción sin esperar el flujo normal.|Temporal (se fusiona a main y develop)|
 |Release **(release/***)|Se utiliza para preparar, probar y ajustar un lanzamiento formal a producción.|Temporal|
+
+## Operaciones Esenciales para Manejar Ramas
+
+|Acción|Comando git | 
+|:---|---|
+|Crear rama|git branch <nombre-rama>|
+|Cambiar de rama|git switch <nombre-rama>|
+|Crear y cambiar al instante|git switch -c <nombre-rama>|
+Listar ramas locales|git branch|
+|Listar ramas locales y remotas|git branch -a|
+|Fusionar una rama en la activa|git merge <rama-a-fusionar>|
+|Eliminar rama local (fusionada)|git branch -d <nombre-rama>|
+|Eliminar rama local (forzado)|git branch -D <nombre-rama>|
+Eliminar rama en servidor remoto|git push origin --delete <nombre-rama>|
