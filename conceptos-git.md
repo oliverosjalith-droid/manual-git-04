@@ -9,5 +9,19 @@ Staging Area **(Área de Preparación / Index):** Es una zona intermedia donde s
 
 Repository **(Repositorio / .git):** Es la base de datos donde Git almacena permanentemente el historial de versiones en forma de commits.
 
+## Conceptos Clave
+### 1. Repositorio **(Repository)**
+Es el espacio de almacenamiento (carpeta) supervisado por Git. Contiene todos los archivos del proyecto, así como la base de datos de historial **(.git).** Puede ser local (en tu computadora) o remoto (alojado en plataformas como GitHub, GitLab o Bitbucket).
 
+### 2. Commit
+Es una captura de pantalla **(snapshot)** del estado de tu proyecto en un momento determinado. Cada commit tiene un identificador único **(SHA-1/SHA-256),** un autor, una fecha y un mensaje descriptivo que explica los cambios realizados.
+
+### 3. Rama **(Branch)**
+Es una línea de desarrollo independiente. Las ramas permiten trabajar en nuevas funcionalidades, correcciones o experimentos sin alterar la línea de código principal **(generalmente llamada main o master).**
+
+### 4. Fusión **(Merge)**
+Es el proceso de integrar los cambios y el historial de una rama hacia otra. Permite unificar el trabajo de diferentes desarrolladores en una sola versión del proyecto.
+
+### 5. Conflicto de Fusión **(Merge Conflict)**
+Ocurre cuando Git no puede unificar automáticamente dos líneas de código **(por ejemplo, cuando dos personas editan la misma línea del mismo archivo de forma diferente).** Requiere intervención humana para decidir qué cambios conservar.
 
