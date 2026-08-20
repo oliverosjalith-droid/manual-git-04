@@ -20,3 +20,11 @@ Los comandos básicos de Git estructuran el flujo de trabajo diario, desde la co
 **Variación útil:** git log *--oneline --*graph muestra una vista compacta y gráfica de las ramas.
 
 **git diff:** Compara las diferencias de código línea por línea entre el directorio de trabajo y el área de preparación ***(staging)***, o entre dos commits específicos.
+
+## Gestión de Cambios **(Staging y Commit)**
+
+**git add <archivo>:** Traslada los cambios del directorio de trabajo al Staging Area ***(preparación)***. Puedes añadir un archivo específico o usar git add . para incluir todas las modificaciones pendientes.
+
+**git commit -m "mensaje":** Guarda permanentemente en el historial los cambios almacenados en el área de preparación. El mensaje debe ser breve pero descriptivo respecto a qué se implementó o corrigió.
+
+**git restore <archivo>:** Descarta las modificaciones locales no guardadas en el directorio de trabajo, regresando el archivo a su estado en el último commit.
