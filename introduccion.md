@@ -41,3 +41,38 @@
 **En conclusión, GitHub es mucho más que una plataforma para almacenar código. Se trata de un entorno que facilita la gestión, organización, colaboración y evolución de proyectos tecnológicos. Su integración con Git permite mantener un historial de cambios y trabajar de manera controlada sobre diferentes versiones de un proyecto, mientras que funciones como los repositorios, commits, ramas, pull requests e Issues proporcionan herramientas para coordinar el trabajo de los desarrolladores.**
 
 **La importancia de GitHub se extiende tanto al ámbito educativo como al profesional y al desarrollo de software de código abierto. Para los estudiantes, representa una oportunidad para aprender mediante proyectos prácticos y adquirir conocimientos que pueden ser útiles en su formación. Para los desarrolladores y equipos profesionales, ofrece herramientas que facilitan la colaboración y la administración de proyectos. En un entorno tecnológico en constante crecimiento, conocer Git y GitHub constituye una habilidad valiosa para cualquier persona interesada en la programación y el desarrollo de software. Por estas razones, GitHub se ha consolidado como una herramienta fundamental para trabajar de forma organizada, colaborativa y eficiente en proyectos tecnológicos.**
+
+
+| **Tema**                            | **Información**                                                                                                                                                                                                          |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **¿Qué es Git?**                    | Git es un sistema de control de versiones que permite administrar los cambios realizados en los archivos de un proyecto. Su principal objetivo es conservar un historial organizado del trabajo realizado.               |
+| **Origen de Git**                   | Git fue desarrollado en 2005 por Linus Torvalds, quien necesitaba una herramienta eficiente para administrar el desarrollo del kernel de Linux.                                                                          |
+| **¿Cuál es su función principal?**  | Permite registrar diferentes estados de un proyecto para poder consultar, comparar o recuperar versiones anteriores cuando sea necesario.                                                                                |
+| **Git distribuido**                 | A diferencia de algunos sistemas de control de versiones centralizados, Git permite que cada desarrollador tenga una copia completa del historial del proyecto en su computador.                                         |
+| **Trabajo sin conexión**            | Muchas operaciones de Git pueden realizarse sin conexión a Internet, como crear commits, revisar el historial o crear ramas. La conexión normalmente se necesita para sincronizar los cambios con un repositorio remoto. |
+| **Área de trabajo**                 | Es el espacio donde el desarrollador modifica, crea o elimina archivos antes de registrarlos en Git.                                                                                                                     |
+| **Staging Area**                    | Es una zona intermedia donde se seleccionan los cambios que se desean incluir en el próximo commit. Esto permite controlar exactamente qué modificaciones se van a guardar.                                              |
+| **Commit**                          | Es un punto de control que registra un conjunto específico de cambios. Los commits permiten construir el historial del proyecto y conocer cómo ha evolucionado.                                                          |
+| **Ramas**                           | Las ramas permiten desarrollar diferentes características o realizar pruebas sin modificar directamente la versión principal del proyecto.                                                                               |
+| **Repositorio local**               | Es la versión del proyecto almacenada en el computador del desarrollador. Contiene los archivos y el historial administrado por Git.                                                                                     |
+| **Repositorio remoto**              | Es una copia del repositorio almacenada en un servidor. Puede utilizarse para compartir el proyecto y sincronizar el trabajo entre diferentes personas.                                                                  |
+| **Git y GitHub**                    | Git es la herramienta que controla las versiones. GitHub es una plataforma que permite alojar repositorios Git y facilita la colaboración y administración de proyectos.                                                 |
+| **Historial del proyecto**          | Git conserva información sobre los cambios realizados, permitiendo revisar cómo se ha desarrollado el proyecto desde sus primeras modificaciones.                                                                        |
+| **Deshacer cambios**                | Git ofrece diferentes mecanismos para corregir o revertir modificaciones cuando se comete un error, dependiendo de si los cambios fueron guardados o enviados al repositorio remoto.                                     |
+| **Trabajo en equipo**               | Git facilita que varios desarrolladores trabajen sobre un mismo proyecto mediante ramas, commits y mecanismos para integrar diferentes modificaciones.                                                                   |
+| **Importancia para un programador** | Aprender Git ayuda a desarrollar una metodología de trabajo más organizada y es una herramienta muy utilizada en proyectos académicos y profesionales de desarrollo de software.                                         |
+
+| **Comando**  | **¿Para qué sirve?**                                                      |
+| ------------ | ------------------------------------------------------------------------- |
+| `git init`   | Inicia un repositorio Git en una carpeta.                                 |
+| `git clone`  | Crea una copia local de un repositorio existente.                         |
+| `git status` | Muestra los archivos modificados y el estado actual del repositorio.      |
+| `git add`    | Selecciona cambios para incluirlos en el próximo commit.                  |
+| `git commit` | Registra los cambios seleccionados en el historial.                       |
+| `git log`    | Permite consultar el historial de commits.                                |
+| `git branch` | Permite crear, consultar o administrar ramas.                             |
+| `git switch` | Permite cambiar de una rama a otra.                                       |
+| `git pull`   | Descarga cambios de un repositorio remoto y los integra al trabajo local. |
+| `git push`   | Envía los commits locales hacia un repositorio remoto.                    |
+
+
