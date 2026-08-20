@@ -120,3 +120,4 @@ Ocurre cuando Git no puede unificar automáticamente dos líneas de código **(p
 -   `git stash`: Guarda temporalmente los cambios que no están listos para ser confirmados.
 
 
+
