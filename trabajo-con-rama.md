@@ -67,3 +67,8 @@ Estas protecciones ayudan a los equipos a mantener las ramas importantes estable
 
 5.  Marca las reglas que deseas aplicar (ej. _Require a pull request before merging_) y guarda los cambios.
 
+## Tipos de Ramas según su Propósito **(Estrategia de Trabajo)**
+
+|tipo de rama|proposito y funcion |vida util|
+|---|---|---|
+|Main / Master|Contiene el código oficial y estable que está (o irá) a producción.|Permanente|
