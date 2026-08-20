@@ -121,3 +121,4 @@ Ocurre cuando Git no puede unificar automáticamente dos líneas de código **(p
 
 
 
+**Seguridad y Respaldo:** Permite restaurar versiones anteriores del proyecto ante fallos o errores en producción.
