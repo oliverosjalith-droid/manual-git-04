@@ -67,3 +67,34 @@ Estas protecciones ayudan a los equipos a mantener las ramas importantes estable
 
 5.  Marca las reglas que deseas aplicar (ej. _Require a pull request before merging_) y guarda los cambios.
 
+## Tipos de Ramas según su Propósito **(Estrategia de Trabajo)**
+
+|tipo de rama|proposito y funcion |vida util|
+|---|---|---|
+|Main / Master|Contiene el código oficial y estable que está (o irá) a producción.|Permanente|
+|Develop|Sirve como rama de integración para acumular todas las nuevas funciones antes de lanzarlas.|permanente|
+|Feature **(feature/***)|Se usa para construir una funcionalidad específica (ej: feature/login-google).|Temporal (se elimina al fusionarse)|
+|Hotfix **(hotfix/***)|Permite corregir errores críticos directamente sobre producción sin esperar el flujo normal.|Temporal (se fusiona a main y develop)|
+|Release **(release/***)|Se utiliza para preparar, probar y ajustar un lanzamiento formal a producción.|Temporal|
+
+## Operaciones Esenciales para Manejar Ramas
+
+|Acción|Comando git | 
+|:---|---|
+|Crear rama|git branch <nombre-rama>|
+|Cambiar de rama|git switch <nombre-rama>|
+|Crear y cambiar al instante|git switch -c <nombre-rama>|
+Listar ramas locales|git branch|
+|Listar ramas locales y remotas|git branch -a|
+|Fusionar una rama en la activa|git merge <rama-a-fusionar>|
+|Eliminar rama local (fusionada)|git branch -d <nombre-rama>|
+|Eliminar rama local (forzado)|git branch -D <nombre-rama>|
+Eliminar rama en servidor remoto|git push origin --delete <nombre-rama>|
+
+## Buenas prácticas al trabajar con ramas:
+
+**Nombres descriptivos** Aplica convenciones estándar usando prefijos (feature/, bugfix/, hotfix/).
+
+**Un propósito por rama:** No mezcles la corrección de un diseño con la lógica de una base de datos en la misma rama.
+
+**Limpieza constante:** Borra las ramas temporales inmediatamente después de hacer la integración (merge) para no saturar el historial.
