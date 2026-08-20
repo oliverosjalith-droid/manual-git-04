@@ -28,3 +28,23 @@ Los comandos básicos de Git estructuran el flujo de trabajo diario, desde la co
 **git commit -m "mensaje":** Guarda permanentemente en el historial los cambios almacenados en el área de preparación. El mensaje debe ser breve pero descriptivo respecto a qué se implementó o corrigió.
 
 **git restore <archivo>:** Descarta las modificaciones locales no guardadas en el directorio de trabajo, regresando el archivo a su estado en el último commit.
+
+## Ramas y Control de Flujo
+
+**git branch:** Administra las líneas temporales de desarrollo. Utilizado solo, lista las ramas locales. Con un nombre al final *(git branch mi-rama)*, crea una rama nueva.
+
+**git switch <rama> o git checkout <rama>:** Cambia el espacio de trabajo hacia la rama indicada.
+
+**Atajo:** git switch -c nueva-rama crea la rama y te posiciona en ella inmediatamente.
+
+**git merge <rama>:** Une el historial de la rama especificada dentro de la rama activa actual.
+
+## Sincronización Remota
+
+**git fetch:** Descarga los cambios y referencias creados en el repositorio remoto, pero sin aplicarlos ni alterar tu código local de manera automática.
+
+**git pull:** Descarga e integra automáticamente los cambios del servidor remoto en tu rama local **(equivale a realizar un git fetch seguido de un git merge).**
+
+**git push:** Sube tus commits locales confirmados hacia el servidor remoto para compartirlos con el resto del equipo.
+
+**Uso habitual:** git push origin ***<nombre-de-rama>***
