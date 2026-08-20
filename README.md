@@ -2,3 +2,4 @@
 ##  Nombres de integrantes del grupo: 
 
 - JALITH SANTIAGO OLIVEROS VALENZUELA
+- YANDRY VANESA BERRIO GOMEZ
