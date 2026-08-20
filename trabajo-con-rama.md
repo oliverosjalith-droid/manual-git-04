@@ -25,3 +25,45 @@ Cuando creas un repositorio con contenido en GitHub, GitHub crea el repositorio 
 -   **Cambiar la rama predeterminada:** Si prefieres usar otro nombre (por ejemplo, `develop` o `release`), puedes ir a la pestaña **Settings > Branches** de tu repositorio en GitHub y seleccionar otra rama como predeterminada.
     
 -   **Protección de rama (_Branch Protection Rules_):** Dado que contiene el código crítico, es una buena práctica activar reglas para evitar que se puedan subir cambios directamente (`git push`). Obliga a que todo cambio pase por un _Pull Request_ e incluya revisión de código. 
+
+# Trabajar con ramas protegidas
+
+Las ramas protegidas ayudan a los mantenedores a aplicar reglas en ramas importantes. Una rama protegida puede bloquear las inserciones o eliminaciones forzadas, requerir comprobaciones de estado, requerir revisiones, requerir aprobación del propietario del código o requerir confirmaciones firmadas antes de que los cambios se puedan combinar.
+
+Estas protecciones ayudan a los equipos a mantener las ramas importantes estables y hacer que las expectativas sean claras antes de combinar una solicitud de incorporación de cambios.
+
+## Reglas de Protección más Comunes
+
+-   **Requerir Pull Request antes de fusionar:** Nadie puede hacer un `git push` directo a la rama. Todo cambio debe enviarse mediante un _Pull Request_ (PR).
+    
+-   **Aprobaciones obligatorias:** Exige que uno o más miembros del equipo revisen y aprueben el PR antes de hacer el _merge_.
+    
+-   **Comprobaciones de estado exitosas (_Status Checks_):** Exige que las pruebas automáticas (CI/CD) pasen sin errores antes de permitir la integración.
+    
+-   **Restringir quién puede hacer _push_ o _merge_:** Permite definir qué usuarios, equipos o roles tienen permiso para autorizar cambios.
+    
+-   **Bloquear eliminaciones y _force push_:** Evita que se elimine la rama por error o que se sobrescriba el historial de commits.
+
+## Flujo de Trabajo en una Rama Protegida 
+-   **Intento de push denegado:** Si intentas subir cambios directo con `git push origin main`, GitHub rechazará el comando.
+    
+-   **Crear rama secundaria:** Trabajas tus cambios en una rama independiente (`git checkout -b feature/nueva-funcion`).
+    
+-   **Subir rama y abrir PR:** Subes tu rama local (`git push origin feature/nueva-funcion`) y abres un Pull Request hacia la rama protegida en la web de GitHub.
+    
+-   **Revisión y pruebas:** Tu equipo revisa el código y las pruebas automáticas se ejecutan.
+    
+-   **Fusión (_Merge_):** Una vez cumplidos todos los requisitos, se habilita el botón de _Merge_ para integrar los cambios.
+
+## Cómo Configurar una Rama Protegida en GitHub
+
+1.  Ve a la pestaña **Settings** dentro de tu repositorio.
+
+2.  En el menú lateral izquierdo, selecciona **Branches**.
+
+3. Haz clic en **Add branch protection rule** (o edita una existente).
+
+4.   Escribe el nombre o patrón de la rama (por ejemplo, `main`).
+
+5.  Marca las reglas que deseas aplicar (ej. _Require a pull request before merging_) y guarda los cambios.
+
