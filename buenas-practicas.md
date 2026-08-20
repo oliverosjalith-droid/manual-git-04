@@ -108,3 +108,29 @@ En proyectos colaborativos es recomendable utilizar ramas para desarrollar nueva
 10. Documentar adecuadamente el proyecto
 
 Es recomendable mantener actualizado un archivo como README.md, donde se explique qué hace el proyecto, cómo instalarlo, cómo ejecutarlo y cuáles son sus principales características.
+
+##  Comandos básicos de Git ##
+| Comando      | Función                                           |
+| ------------ | ------------------------------------------------- |
+| `git init`   | Crea un nuevo repositorio Git                     |
+| `git clone`  | Copia un repositorio existente                    |
+| `git status` | Muestra el estado de los archivos                 |
+| `git add`    | Prepara archivos para un commit                   |
+| `git commit` | Guarda los cambios en el historial                |
+| `git push`   | Envía cambios al repositorio remoto               |
+| `git pull`   | Descarga e integra cambios del repositorio remoto |
+| `git branch` | Permite administrar ramas                         |
+| `git switch` | Permite cambiar de rama                           |
+| `git merge`  | Une los cambios de una rama con otra              |
+| `git log`    | Muestra el historial de commits                   |
+
+
+##  Importancia de las buenas prácticas
+
+Aplicar buenas prácticas de Git permite trabajar de manera más organizada y segura. En proyectos donde participan varias personas, estas prácticas ayudan a evitar conflictos, identificar errores, conocer el historial del proyecto y recuperar información cuando sea necesario.
+
+Además, aprender a utilizar Git correctamente es importante para los desarrolladores de software, ya que es una herramienta ampliamente utilizada en proyectos profesionales.
+
+# Conclusión #
+
+Git es una herramienta fundamental para el desarrollo de software porque permite controlar y organizar las diferentes versiones de un proyecto. Sin embargo, utilizar Git no consiste únicamente en ejecutar comandos, sino también en seguir buenas prácticas como realizar commits claros, utilizar ramas, revisar los cambios, mantener actualizado el repositorio y proteger la información privada.
