@@ -198,3 +198,149 @@ Esto puede provocar que cambios que todavía no están terminados se incorporen 
 
 Antes de comenzar a trabajar, es recomendable comprobar la rama actual:
 
+```bash
+git branch
+```
+
+También puede utilizarse:
+
+```bash
+git status
+```
+
+Para crear una nueva rama se puede utilizar:
+
+```bash
+git branch nueva-funcionalidad
+```
+
+Y posteriormente cambiarse a ella:
+
+```bash
+git switch nueva-funcionalidad
+```
+
+Trabajar con ramas correctamente permite separar diferentes funcionalidades y reducir el riesgo de afectar directamente la versión principal del proyecto.
+
+## 9. Archivos que no deberían estar en el repositorio
+
+Otro problema importante ocurre cuando se suben archivos innecesarios o información privada al repositorio. Por ejemplo, archivos temporales, configuraciones personales, contraseñas, claves privadas o archivos generados automáticamente pueden terminar dentro del proyecto.
+
+Esto puede aumentar el tamaño del repositorio y, en casos más graves, provocar problemas de seguridad.
+
+### Solución
+
+ Para evitarlo se utiliza un archivo llamado `.gitignore`. En este archivo se especifican los elementos que Git debe ignorar.
+
+Por ejemplo:
+
+```text
+.env
+node_modules/
+__pycache__/
+*.log
+```
+
+De esta forma, determinados archivos no serán incluidos accidentalmente en los commits.
+
+Es especialmente importante evitar subir contraseñas, tokens, claves privadas y otras credenciales. Si información sensible ya fue publicada, no basta con eliminar el archivo de la versión actual, porque puede continuar existiendo en el historial. En esos casos, es necesario revocar o cambiar inmediatamente las credenciales comprometidas y, cuando sea necesario, limpiar el historial siguiendo procedimientos adecuados.
+
+## 10. Problemas al eliminar o modificar archivos
+
+En algunas ocasiones, un usuario puede eliminar accidentalmente un archivo importante o modificarlo de manera incorrecta. Si el cambio todavía no se ha confirmado, existen posibilidades de recuperar el archivo dependiendo del estado del repositorio.
+
+Una de las ventajas de Git es precisamente mantener un historial de modificaciones. Esto permite consultar versiones anteriores del proyecto.
+
+### Solución
+
+El historial puede revisarse mediante:
+
+```bash
+git log
+```
+
+Este comando muestra los commits realizados.
+
+También se puede consultar información sobre los cambios utilizando:
+
+```bash
+git diff
+```
+
+Si un archivo fue eliminado accidentalmente pero su versión anterior está disponible en el historial, puede ser posible recuperarlo utilizando las herramientas de Git correspondientes.
+
+La recuperación debe realizarse cuidadosamente, especialmente cuando existen cambios nuevos que no se quieren perder.
+
+## 11. Problemas con el repositorio remoto
+
+Git utiliza una dirección conocida como `remote` para establecer la conexión entre el repositorio local y el repositorio almacenado en GitHub.
+
+En ocasiones, esta dirección puede estar configurada incorrectamente. Como consecuencia, los comandos `pull` o `push` pueden intentar conectarse con un repositorio equivocado.
+
+### Solución
+
+Para comprobar la dirección configurada se puede utilizar:
+
+```bash
+git remote -v
+```
+
+Si la dirección es incorrecta, puede modificarse mediante:
+
+```bash
+git remote set-url origin NUEVA_URL
+```
+
+Después se puede comprobar nuevamente la configuración.
+
+Mantener correctamente configurado el repositorio remoto es fundamental para evitar enviar cambios al proyecto equivocado.
+
+## 12. Problemas de permisos
+
+Un usuario puede tener acceso para consultar un repositorio, pero no necesariamente tener autorización para modificarlo. Esto es especialmente común en proyectos pertenecientes a otras personas u organizaciones.
+
+Cuando no se tienen permisos suficientes, GitHub puede impedir determinadas operaciones.
+
+### Solución
+
+La solución consiste en comprobar los permisos asignados al usuario. El propietario o administrador del repositorio puede conceder acceso de acuerdo con las necesidades del proyecto.
+
+En proyectos de código abierto, otra alternativa habitual es realizar una copia o fork del repositorio, realizar los cambios en esa copia y posteriormente proponerlos mediante un pull request.
+
+## 13. Problemas al trabajar con un fork
+
+Un fork es una copia de un repositorio que permite trabajar sobre un proyecto sin modificar directamente el repositorio original. Es muy utilizado en proyectos de código abierto.
+
+Uno de los problemas que pueden aparecer es que el fork quede desactualizado con respecto al repositorio original. Mientras el proyecto principal continúa recibiendo cambios, la copia puede quedarse atrás.
+
+### Solución
+
+Es necesario sincronizar periódicamente el fork con el repositorio original. Esto permite trabajar sobre una versión más reciente del proyecto y disminuye la posibilidad de conflictos cuando se intenta realizar una contribución.
+
+Además, antes de proponer cambios al proyecto original, es conveniente comprobar que la rama utilizada se encuentra actualizada.
+
+## 14. Problemas por falta de sincronización
+
+Cuando varias personas trabajan en un proyecto, cada una puede tener una copia local diferente. Si una persona realiza cambios y los sube a GitHub mientras otra continúa trabajando con una versión antigua, pueden aparecer diferencias entre las copias.
+
+### Solución
+
+Una buena práctica es actualizar periódicamente el repositorio local y revisar el estado antes de comenzar una nueva tarea.
+
+Un flujo básico puede ser:
+
+```bash
+git pull
+git status
+```
+
+Después se pueden realizar los cambios, crear un commit y enviarlos:
+
+```bash
+git add .
+git commit -m "Descripción de los cambios"
+git push
+```
+
+Este proceso ayuda a mantener sincronizado el trabajo local con el repositorio remoto.
+
