@@ -71,3 +71,51 @@ Ocurre cuando Git no puede unificar automáticamente dos líneas de código **(p
 -   Rebase: `git rebase`integra los cambios de una rama en otra moviendo o combinando confirmaciones.
 
 -   Resolución de conflictos: Los conflictos se pueden resolver editando manualmente los archivos en conflicto y confirmando los cambios.
+
+# Comandos de Git
+
+### Configuración:
+
+-   `git config --global user.name "Your Name"`: Establece tu nombre para las confirmaciones de Git.
+
+-   `git config --global user.email "yourname@example.com"`: Configura tu correo electrónico para las confirmaciones de Git.
+
+### Inicialización y clonación del repositorio:
+
+-   `git init`Inicializa un nuevo repositorio Git.
+
+-   `git clone <repository_url>`: Clona un repositorio remoto en tu máquina local.
+
+### Flujo de trabajo básico:
+
+-   `git status`: Muestra el estado del repositorio.
+
+-   `git add <file>`: Agrega un archivo al área de preparación.
+
+-   `git commit -m "Commit message"`: Confirma los cambios en el área de preparación.
+
+-   `git push <remote> <branch>`: Envía confirmaciones a un repositorio remoto.
+
+-   `git pull <remote> <branch>`: Obtiene y fusiona los cambios de un repositorio remoto.
+
+### Ramificación y fusión:
+
+-   `git branch`: Muestra todas las ramas del repositorio.
+
+-   `git branch <branch_name>`: Crea una nueva rama.
+
+-   `git checkout <branch_name>`: Cambia a la rama especificada.
+
+-   `git merge <branch_name>`: Fusiona los cambios de una rama con la rama actual.
+
+-   `git rebase <branch_name>`: Integra los cambios de una rama en otra rama.
+
+
+### Historial y deshacer:
+
+-   `git log`: Muestra el historial de confirmaciones.
+
+-   `git reset <commit_hash>`: Restablece el repositorio a una confirmación específica.
+
+-   `git stash`: Guarda temporalmente los cambios que no están listos para ser confirmados.
+
