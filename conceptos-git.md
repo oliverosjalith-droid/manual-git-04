@@ -25,3 +25,9 @@ Es el proceso de integrar los cambios y el historial de una rama hacia otra. Per
 ### 5. Conflicto de Fusión **(Merge Conflict)**
 Ocurre cuando Git no puede unificar automáticamente dos líneas de código **(por ejemplo, cuando dos personas editan la misma línea del mismo archivo de forma diferente).** Requiere intervención humana para decidir qué cambios conservar.
 
+## Importancia en el Desarrollo Moderno
+**Trazabilidad:** Permite saber quién, cuándo y por qué se realizó un cambio en el código.
+
+**Trabajo en Paralelo:** Múltiples desarrolladores pueden trabajar simultáneamente en el mismo proyecto sin sobrescribir el trabajo de los demás.
+
+**Seguridad y Respaldo:** Permite restaurar versiones anteriores del proyecto ante fallos o errores en producción.
